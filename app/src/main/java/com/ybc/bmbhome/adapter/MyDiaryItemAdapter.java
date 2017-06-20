@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * 自定义ListView适配器
  *
- * @author king
+ * @author ybc
  */
 public class MyDiaryItemAdapter extends BaseAdapter {
     List<DiaryItem> items = null;
