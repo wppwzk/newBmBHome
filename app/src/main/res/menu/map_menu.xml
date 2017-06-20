@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/map_type_or"
+        android:title="普通地图"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/map_type_sky"
+        android:title="卫星地图"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/map_show_list"
+        android:title="运动轨迹"
+        android:icon="@drawable/map_list"
+        app:showAsAction="ifRoom"
+        />
+</menu>

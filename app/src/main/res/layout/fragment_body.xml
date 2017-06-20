@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sport_back"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="身体"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+             />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nonstepfpuncition"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            />
+
+        <com.ybc.bmbhome.view.TasksCompletedView
+            android:id="@+id/tasks_view"
+            android:layout_width="wrap_content"
+            android:layout_height="255dp"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/circle_color"
+            app:radius="100dip"
+            app:ringColor="@color/ring_color"
+            app:strokeWidth="20dip" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/run_body"
+            android:layout_width="230dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:background="@drawable/butloginwight"
+            android:text="开始运动" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/run_body"
+            android:layout_height="10dp"/>
+
+
+
+        <Button
+            android:id="@+id/buttonmobile"
+            android:layout_width="230dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/run_body"
+            android:background="@drawable/butloginwight"
+            android:text="手机使用情况" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></LinearLayout>
+        <Button
+            android:id="@+id/but_photo_body"
+            android:layout_width="230dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonmobile"
+            android:background="@drawable/butloginwight"
+            android:text="拍照" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.ybc.bmbhome.function.MapActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--<RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_background">
+
+        <ToggleButton
+            android:id="@+id/locationbtn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/music_play"
+            android:textOff="开始记录"
+            android:textOn="停止记录"/>
+
+        <ToggleButton
+            android:id="@+id/tbmakemap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="top"
+            android:checked="false"
+            android:textOff="普通地图"
+            android:textOn="卫星地图" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_lly_right"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+
+            <Button
+                android:id="@+id/title_tv_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="true"
+                android:onClick="record"
+                android:text="历史轨迹"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <com.amap.api.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ToggleButton
+                android:id="@+id/locationbtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:descendantFocusability="beforeDescendants"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/mapbtback"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textOff="开始记录"
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"
+                android:textOn="停止记录"/>
+
+        </com.amap.api.maps.MapView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

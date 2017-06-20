@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="个人设置">
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_display_name"
+            android:inputType="textCapWords"
+            android:key="set_user_name"
+            android:maxLines="1"
+            android:persistent="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="设置昵称"
+            android:title="@string/pref_title_display_name" />
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="15000"
+            android:inputType="number"
+            android:key="set_user_step"
+            android:maxLines="1"
+            android:persistent="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="10000"
+            android:title="设置步数" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="其他设置">
+        <PreferenceScreen
+            android:summary="日记设置..."
+            android:title="更多设置">
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="if_diary_password"
+                android:summary=""
+                android:summaryOff="已关闭"
+                android:summaryOn="已启用"
+                android:title="启用日记本密码" />
+            <Preference
+                android:key="cleanDiaryPassword"
+                android:summary="重置日记本密码"
+                android:title="重置密码">
+                <intent android:action="com.ybc.resertDiaryPass" />
+            </Preference>
+            <SwitchPreference
+                android:summary=""
+                android:title="其他设置" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="关于">
+        <Preference
+            android:summary="平胸小萝莉"
+            android:title="作者" />
+        <Preference
+            android:summary="1.0"
+            android:title="版本号" />
+        <Preference
+            android:summary="点击向我发送邮件：q11w1e1r@sina.com"
+            android:title="联系方式">
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

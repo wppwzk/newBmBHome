@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diary_mood">
+        <item>快乐</item>
+        <item>无奈</item>
+        <item>悲伤</item>
+        <item>忧郁</item>
+    </string-array>
+</resources>

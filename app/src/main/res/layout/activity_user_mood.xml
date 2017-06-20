@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ybc.bmbhome.function.UserMoodActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_user_mood_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sasasasdsasa"
+        android:layout_gravity="center_horizontal"
+        android:text="最近一周的心情"
+        android:layout_below="@+id/toolbar_user_mood_line"
+        android:layout_centerHorizontal="true" />
+
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/mood_pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@+id/sasasasdsasa"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:transitionName="line"/>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mood_pie_chart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="" />
+</RelativeLayout>
