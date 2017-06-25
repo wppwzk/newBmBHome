@@ -24,7 +24,7 @@ android {
     }
     repositories{
         flatDir{
-            dirs 'libs' //就是你放aar的目录地址
+            dirs 'libs' //放aar的目录地址
         }
     }
     lintOptions {
@@ -51,6 +51,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
     testCompile 'junit:junit:4.12'
 }
