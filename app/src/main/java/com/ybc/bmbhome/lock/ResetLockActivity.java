@@ -17,7 +17,8 @@ import com.ybc.bmbhome.view.LockPatternView;
 import java.util.List;
 
 /**
- * 重置密码*/
+ * 重置密码
+ */
 public class ResetLockActivity extends BaseActivity implements
         LockPatternView.OnPatternListener {
     private static final String TAG = "LockActivity";

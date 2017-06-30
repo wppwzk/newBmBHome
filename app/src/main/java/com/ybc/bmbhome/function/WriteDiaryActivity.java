@@ -22,7 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 写日记*/
+ * 写日记
+ */
 public class WriteDiaryActivity extends BaseActivity {
     private Button mSaveBtn;
     private Spinner spinner;
@@ -62,7 +63,8 @@ public class WriteDiaryActivity extends BaseActivity {
 
 
     /**
-     * 初始化控件*/
+     * 初始化控件
+     */
     public void initView() {
         spinner = (Spinner) findViewById(R.id.spinner);
         mSaveBtn = (Button) findViewById(R.id.btn_save);
@@ -75,7 +77,8 @@ public class WriteDiaryActivity extends BaseActivity {
 
 
     /**
-     * 加载当天日期*/
+     * 加载当天日期
+     */
     private void initDate() {
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -87,7 +90,8 @@ public class WriteDiaryActivity extends BaseActivity {
 
 
     /**
-     * 加载要更新的数据*/
+     * 加载要更新的数据
+     */
     private void initUpdateData() {
         DiaryItem mDiary = (DiaryItem) getIntent().getSerializableExtra(DiaryActivity.SER_KEY);
         mId = mDiary.getId();
@@ -107,7 +111,8 @@ public class WriteDiaryActivity extends BaseActivity {
 
 
     /**
-     * 保存日记*/
+     * 保存日记
+     */
     private void saveOnClick() {
         mSaveBtn.setOnClickListener(new OnClickListener() {
             @Override
@@ -154,7 +159,8 @@ public class WriteDiaryActivity extends BaseActivity {
 
 
     /**
-     * 复写返回键功能*/
+     * 复写返回键功能
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 

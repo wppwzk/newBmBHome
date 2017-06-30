@@ -24,7 +24,8 @@ import com.ybc.bmbhome.utils.DiaryItem;
 import java.util.ArrayList;
 
 /**
- * 日记本*/
+ * 日记本
+ */
 public class DiaryActivity extends BaseActivity {
     public static final String LOCK = "lock";
     public static final String LOCK_KEY = "lock_key";
@@ -71,7 +72,8 @@ public class DiaryActivity extends BaseActivity {
 
 
     /**
-     * 显示listview内容*/
+     * 显示listview内容
+     */
     private void initData() {
         util = new DbUtil(this);
 
@@ -129,7 +131,9 @@ public class DiaryActivity extends BaseActivity {
 
     /**
      * 提示菜单响应函数
-     * @param item 点击了菜单栏里面的第几个项目*/
+     *
+     * @param item 点击了菜单栏里面的第几个项目
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         // item.getItemId()：点击了菜单栏里面的第几个项目");
@@ -149,7 +153,8 @@ public class DiaryActivity extends BaseActivity {
 
 
     /**
-     * 初始化控件*/
+     * 初始化控件
+     */
     private void initView() {
         // 我的日记界面
         //mLayoutList = (RelativeLayout) findViewById(R.id.layout_list);
@@ -158,9 +163,9 @@ public class DiaryActivity extends BaseActivity {
     }
 
 
-
     /**
-     * 跳转至添加新日记*/
+     * 跳转至添加新日记
+     */
     private void addBtnOnClick() {
         mBtnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

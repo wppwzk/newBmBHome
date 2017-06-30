@@ -15,19 +15,22 @@ public class ActivityCollector {
     public static List<AppCompatActivity> activities = new ArrayList<>();
 
     /**
-     * 添加activity*/
+     * 添加activity
+     */
     public static void addActivity(AppCompatActivity activity) {
         activities.add(activity);
     }
 
     /**
-     * 删除activity*/
+     * 删除activity
+     */
     public static void removeActivity(AppCompatActivity activity) {
         activities.remove(activity);
     }
 
     /**
-     * 结束所有list中的activity*/
+     * 结束所有list中的activity
+     */
     public static void finishAll() {
         for (AppCompatActivity activity : activities) {
             if (!activity.isFinishing()) {

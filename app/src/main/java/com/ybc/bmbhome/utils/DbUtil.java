@@ -14,7 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * 数据库操作的工具类*/
+ * 数据库操作的工具类
+ */
 public class DbUtil {
 
     private SQLiteDatabase db;
@@ -26,7 +27,8 @@ public class DbUtil {
 
     /**
      * 获取星期数
-     * @param  dt 日期
+     *
+     * @param dt 日期
      */
     public static String getWeekOfDate(Date dt) {
         String[] weekDays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
@@ -39,13 +41,15 @@ public class DbUtil {
     }
 
     /**
-     * 开启数据库*/
+     * 开启数据库
+     */
     public void open() throws SQLException {
         db = dbHelper.getWritableDatabase();
     }
 
     /**
-     * 关闭数据库*/
+     * 关闭数据库
+     */
     public void close() {
         dbHelper.close();
     }
@@ -53,9 +57,11 @@ public class DbUtil {
 
     /**
      * 日记的插入数据操作
-     * @param title 日记题目
+     *
+     * @param title   日记题目
      * @param content 日记内容
-     * @param mood 心情*/
+     * @param mood    心情
+     */
     public void insert(String title, String content, String mood) {
 
         this.open();
@@ -80,7 +86,8 @@ public class DbUtil {
     }
 
     /**
-     * 心情的插入数据库*/
+     * 心情的插入数据库
+     */
     public void insertMood(String mood) {
         this.open();
         /* ContentValues */
@@ -96,7 +103,8 @@ public class DbUtil {
     }
 
     /**
-     * 步数的插入数据看操作*/
+     * 步数的插入数据看操作
+     */
     public void insertStep(int step) {
         this.open();
         ContentValues cs = new ContentValues();
@@ -111,7 +119,8 @@ public class DbUtil {
 
 
     /**
-     * 删除数据操作*/
+     * 删除数据操作
+     */
     public boolean delete(String id) {
         this.open();
         String where = DbHelper.DIARY_ID + " = ?";
@@ -125,7 +134,8 @@ public class DbUtil {
 
 
     /**
-     * 更新数据操作*/
+     * 更新数据操作
+     */
     public boolean update(String id, String title, String content, String mood) {
         this.open();
         ContentValues cv = new ContentValues();
@@ -141,14 +151,16 @@ public class DbUtil {
     }
 
     /**
-     * 关闭数据库*/
+     * 关闭数据库
+     */
     public void closeDB() {
         db.close();
     }
 
 
     /**
-     * 获取所有数据*/
+     * 获取所有数据
+     */
     public ArrayList<DiaryItem> getAllData() {
         this.open();
         ArrayList<DiaryItem> items = new ArrayList<DiaryItem>();

@@ -48,7 +48,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 监听结束activity的广播*/
+     * 监听结束activity的广播
+     */
     class ForceCloSeReceiver extends BroadcastReceiver {
 
         @Override

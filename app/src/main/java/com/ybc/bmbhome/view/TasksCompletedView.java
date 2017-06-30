@@ -13,6 +13,7 @@ import com.ybc.bmbhome.R;
 
 /**
  * 运动界面，圆环计步器
+ *
  * @version 1.0
  */
 public class TasksCompletedView extends View {
@@ -47,7 +48,8 @@ public class TasksCompletedView extends View {
     private float mTxtHeight;
 
     /**
-     *构造函数*/
+     * 构造函数
+     */
     public TasksCompletedView(Context context, AttributeSet attrs) {
         super(context, attrs);
         // 获取自定义的属性
@@ -56,7 +58,8 @@ public class TasksCompletedView extends View {
     }
 
     /**
-     * 设置attrs文件中自定义的属性*/
+     * 设置attrs文件中自定义的属性
+     */
     private void initAttrs(Context context, AttributeSet attrs) {
         TypedArray typeArray = context.getTheme().obtainStyledAttributes(attrs,
                 R.styleable.TasksCompletedView, 0, 0);
@@ -69,7 +72,8 @@ public class TasksCompletedView extends View {
     }
 
     /**
-     * 画笔和画的初始化*/
+     * 画笔和画的初始化
+     */
     private void initVariable() {
         mCirclePaint = new Paint();
         mCirclePaint.setAntiAlias(true);
@@ -96,7 +100,9 @@ public class TasksCompletedView extends View {
 
     /**
      * 绘图方法
-     * @param canvas 画笔*/
+     *
+     * @param canvas 画笔
+     */
     @Override
     protected void onDraw(Canvas canvas) {
 
@@ -121,8 +127,10 @@ public class TasksCompletedView extends View {
 
     /**
      * 进度改变时进行相应的绘制
-     * @param progress 当前的进度
-     * @param mTotalProgress 设置的总进度*/
+     *
+     * @param progress       当前的进度
+     * @param mTotalProgress 设置的总进度
+     */
     public void setProgress(int progress, int mTotalProgress) {
         mProgress = progress;
         this.mTotalProgress = mTotalProgress;

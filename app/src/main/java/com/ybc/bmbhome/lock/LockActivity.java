@@ -16,7 +16,8 @@ import com.ybc.bmbhome.view.LockPatternView;
 import java.util.List;
 
 /**
- * 解锁界面*/
+ * 解锁界面
+ */
 public class LockActivity extends BaseActivity implements
         LockPatternView.OnPatternListener {
     private static final String TAG = "LockActivity";
@@ -52,7 +53,8 @@ public class LockActivity extends BaseActivity implements
     }
 
     /**
-     * 点击返回键将此activity和DiaryActivity一同关闭*/
+     * 点击返回键将此activity和DiaryActivity一同关闭
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 

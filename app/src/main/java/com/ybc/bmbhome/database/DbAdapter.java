@@ -8,7 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * 地图数据库*/
+ * 地图数据库
+ */
 public class DbAdapter {
     public static final String KEY_ROWID = "id";
     public static final String KEY_DISTANCE = "distance";

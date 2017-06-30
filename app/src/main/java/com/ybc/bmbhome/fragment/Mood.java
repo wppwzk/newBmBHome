@@ -26,7 +26,8 @@ import com.ybc.bmbhome.utils.DbUtil;
 import java.util.Calendar;
 
 /**
- * 心情fragment*/
+ * 心情fragment
+ */
 public class Mood extends Fragment implements View.OnTouchListener {
 
     private Button wenzhangbt, ceshibt, doctorbt, jiangzuobt;
@@ -187,6 +188,7 @@ public class Mood extends Fragment implements View.OnTouchListener {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        db.closeDB();
+        if (db != null)
+            db.closeDB();
     }
 }

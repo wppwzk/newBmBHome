@@ -44,7 +44,8 @@ public class WebActivity extends Activity {
     }
 
     /**
-     * 设置webview点击返回时如果网页可以后退，不关闭webview而后退网页*/
+     * 设置webview点击返回时如果网页可以后退，不关闭webview而后退网页
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {

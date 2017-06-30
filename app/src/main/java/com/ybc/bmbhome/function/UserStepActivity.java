@@ -22,7 +22,8 @@ import lecho.lib.hellocharts.util.ChartUtils;
 import lecho.lib.hellocharts.view.ColumnChartView;
 
 /**
- * 我的步数*/
+ * 我的步数
+ */
 public class UserStepActivity extends AppCompatActivity {
 
     /*========== 标志位相关 ==========*/

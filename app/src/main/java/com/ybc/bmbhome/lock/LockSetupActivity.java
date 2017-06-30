@@ -21,7 +21,8 @@ import java.util.List;
 
 
 /**
- * 设置手势密码*/
+ * 设置手势密码
+ */
 public class LockSetupActivity extends BaseActivity implements
         LockPatternView.OnPatternListener, OnClickListener {
 
@@ -59,7 +60,8 @@ public class LockSetupActivity extends BaseActivity implements
     }
 
     /**
-     * 界面更新*/
+     * 界面更新
+     */
     private void updateView() {
         switch (step) {
             case STEP_1:

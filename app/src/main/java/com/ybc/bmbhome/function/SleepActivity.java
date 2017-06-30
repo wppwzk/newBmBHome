@@ -18,7 +18,8 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 /**
- * 安心睡眠界面*/
+ * 安心睡眠界面
+ */
 public class SleepActivity extends AppCompatActivity {
     public AudioManager audiomanage;
     int maxVolume, currentVolume;
@@ -26,6 +27,7 @@ public class SleepActivity extends AppCompatActivity {
     private SeekBar sb1, sb2, sb3;
     private boolean b1 = false, b2 = false, b3 = false;
     private Music music;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +62,8 @@ public class SleepActivity extends AppCompatActivity {
     }
 
     /**
-     * 音量变化*/
+     * 音量变化
+     */
     private void changeSeek() {
         sb1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

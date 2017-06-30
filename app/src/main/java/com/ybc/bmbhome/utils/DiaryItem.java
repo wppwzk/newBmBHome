@@ -3,7 +3,8 @@ package com.ybc.bmbhome.utils;
 import java.io.Serializable;
 
 /**
- * 日记列表的实体类*/
+ * 日记列表的实体类
+ */
 public class DiaryItem implements Serializable {
 
     private static final long serialVersionUID = -7060210544600464481L;

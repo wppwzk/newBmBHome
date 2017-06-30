@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     }
 
     /**
-     * 将3个主界面的fragment添加到list中*/
+     * 将3个主界面的fragment添加到list中
+     */
     private ArrayList<Fragment> getFragments() {
         ArrayList localArrayList = new ArrayList();
         localArrayList.add(Mood.newInstance("Mood"));
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     }
 
     /**
-     * 这只启动时默认显示的fragment*/
+     * 这只启动时默认显示的fragment
+     */
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
@@ -69,7 +71,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     /**
      * 当底部导航栏点击时fragment的显示和隐藏
-     * @param position 选择的位置*/
+     *
+     * @param position 选择的位置
+     */
     @Override
     public void onTabSelected(int position) {
         if (fragments != null) {
@@ -93,7 +97,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     /**
      * 当底部导航栏未被点击时fragment的显示和隐藏
-     * @param position 选择的位置*/
+     *
+     * @param position 选择的位置
+     */
     @Override
     public void onTabUnselected(int position) {
         if (fragments != null) {

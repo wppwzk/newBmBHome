@@ -33,6 +33,8 @@
 
     <style name="showMAPlist" parent="Theme.Design.Light"/>
 
+    <style name="register" parent="Base.V7.Theme.AppCompat"/>
+
     <style name="myTransparent">
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowNoTitle">true</item>

@@ -96,7 +96,8 @@ public class CameraActivity extends AppCompatActivity {
     }
 
     /**
-    *创建File对象，用于存储拍照后的图片 */
+     * 创建File对象，用于存储拍照后的图片
+     */
     private void firstTakePhoto() {
         // 创建File对象，用于存储拍照后的图片
         File outputImage = new File(getExternalCacheDir(), "output_image.jpg");
@@ -146,7 +147,8 @@ public class CameraActivity extends AppCompatActivity {
     }
 
     /**
-     * 打开相册*/
+     * 打开相册
+     */
     private void openAlbum() {
         Intent intent = new Intent("android.intent.action.GET_CONTENT");
         intent.setType("image/*");

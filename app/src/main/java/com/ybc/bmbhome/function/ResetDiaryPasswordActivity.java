@@ -13,7 +13,8 @@ import com.ybc.bmbhome.R;
 import com.ybc.bmbhome.lock.LockActivity;
 
 /**
- * 重置日记本密码*/
+ * 重置日记本密码
+ */
 public class ResetDiaryPasswordActivity extends AppCompatActivity {
     public static final String LOCK = "lock";
     public static final String LOCK_KEY = "lock_key";

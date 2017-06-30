@@ -23,7 +23,8 @@ import lecho.lib.hellocharts.util.ChartUtils;
 import lecho.lib.hellocharts.view.PieChartView;
 
 /**
- * 我的心情*/
+ * 我的心情
+ */
 public class UserMoodActivity extends AppCompatActivity {
     /*========= 控件相关 =========*/
     private PieChartView mPieChartView;                 //饼状图控件

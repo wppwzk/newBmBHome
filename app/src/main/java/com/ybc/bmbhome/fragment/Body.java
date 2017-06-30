@@ -29,7 +29,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 身体fragment*/
+ * 身体fragment
+ */
 public class Body extends Fragment implements View.OnTouchListener {
     int ToltalProgress = 0;
     int stepNow = 0;

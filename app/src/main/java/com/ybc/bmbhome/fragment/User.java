@@ -35,7 +35,8 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
- * 我的fragment*/
+ * 我的fragment
+ */
 public class User extends Fragment implements View.OnTouchListener, SharedPreferences.OnSharedPreferenceChangeListener {
     private List<UserItem> userItemList = new ArrayList<>();
     private CircleImageView user_login_bt;
