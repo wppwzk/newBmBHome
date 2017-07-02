@@ -96,7 +96,7 @@ public class CameraActivity extends AppCompatActivity {
     }
 
     /**
-     * 创建File对象，用于存储拍照后的图片.
+     * 创建File对象，用于存储拍照后的图片
      */
     private void firstTakePhoto() {
         // 创建File对象，用于存储拍照后的图片
