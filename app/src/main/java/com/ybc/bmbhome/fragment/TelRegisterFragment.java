@@ -2,6 +2,8 @@ package com.ybc.bmbhome.fragment;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.InputType;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.ybc.bmbhome.R;
 
@@ -31,7 +34,23 @@ public class TelRegisterFragment extends Fragment {
     private Button mBtnSubmitUser;
     private Button mTvGetPhoneCode;
     private LinearLayout linearLayout;
+    private static final int RETURN_OK = 0;
+    private static final int RETURN_FAIL = 1;
 
+    private final Handler msgHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case RETURN_OK:
+                    Toast.makeText(getContext(), "验证成功", Toast.LENGTH_SHORT).show();
+                    break;
+                case RETURN_FAIL:
+                    Toast.makeText(getContext(), "验证失败", Toast.LENGTH_SHORT).show();
+
+                default:
+                    break;
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -152,10 +171,13 @@ public class TelRegisterFragment extends Fragment {
                 switch (event) {
                     case SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE:
                         if (result == SMSSDK.RESULT_COMPLETE) {
-                            //Toast.makeText(getActivity(), "验证成功", Toast.LENGTH_SHORT).show();
-
+                            Message msg = msgHandler.obtainMessage();
+                            msg.what = RETURN_OK;
+                            msgHandler.sendMessage(msg);
                         } else {
-                            //Toast.makeText(getActivity(), "验证失败", Toast.LENGTH_SHORT).show();
+                            Message msg = msgHandler.obtainMessage();
+                            msg.what = RETURN_FAIL;
+                            msgHandler.sendMessage(msg);
                         }
                         break;
                     case SMSSDK.EVENT_GET_VERIFICATION_CODE:
