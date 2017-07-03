@@ -110,7 +110,7 @@ public class Body extends Fragment implements View.OnTouchListener {
             }
         });
         SystemBarTintManager localSystemBarTintManager = new SystemBarTintManager(getActivity());
-        localSystemBarTintManager.setStatusBarTintResource(R.color.blue);
+        localSystemBarTintManager.setStatusBarTintResource(R.color.primary_blue);
         localSystemBarTintManager.setStatusBarTintEnabled(true);
         //return inflater.inflate(R.layout.fragment_body, container, false);
         return view;
