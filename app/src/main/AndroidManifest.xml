@@ -177,6 +177,8 @@
         <activity android:name=".lock.LockActivity" />
         <activity android:name=".lock.LockSetupActivity" />
         <activity android:name=".function.WriteDiaryActivity" />
+        <activity android:name=".function.OpenReadActivity"
+            android:theme="@style/AppTheme.NoActionBar_web"/>
         <activity android:name=".function.ResetDiaryPasswordActivity">
             <intent-filter>
                 <action android:name="com.ybc.resertDiaryPass" />
@@ -184,7 +186,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".function.RegisterActivity"></activity>
+        <activity android:name=".function.RegisterActivity" />
+        <activity android:name=".function.ReadActivity"></activity>
     </application>
 
 </manifest>

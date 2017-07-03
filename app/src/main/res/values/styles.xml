@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorGreen</item>
-        <item name="colorPrimaryDark">@color/colorGreen</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
@@ -14,7 +14,9 @@
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/web_blue</item>
         <item name="colorPrimary">@color/web_blue</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme_NoActionBar_user" parent="android:Theme.Holo.Light">
 
     </style>

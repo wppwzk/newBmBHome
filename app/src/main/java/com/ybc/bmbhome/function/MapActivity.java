@@ -103,7 +103,7 @@ public class MapActivity extends AppCompatActivity implements LocationSource, AM
         initpolyline();
 
         SystemBarTintManager localSystemBarTintManager = new SystemBarTintManager(this);
-        localSystemBarTintManager.setStatusBarTintResource(R.color.blue);
+        localSystemBarTintManager.setStatusBarTintResource(R.color.primary_blue_dark);
         localSystemBarTintManager.setStatusBarTintEnabled(true);
     }
 

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.ybc.bmbhome.R;
 import com.ybc.bmbhome.function.DiaryActivity;
+import com.ybc.bmbhome.function.ReadActivity;
 import com.ybc.bmbhome.function.SleepActivity;
 import com.ybc.bmbhome.function.VoiceActivity;
 import com.ybc.bmbhome.function.WebActivity;
@@ -65,8 +66,8 @@ public class Mood extends Fragment implements View.OnTouchListener {
         wenzhangbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), WebActivity.class);
-                intent.putExtra("url", "http://www.bmbhome.org/article");
+                Intent intent = new Intent(getContext(), ReadActivity.class);
+                //intent.putExtra("url", "http://www.bmbhome.org/article");
                 startActivity(intent);
             }
         });

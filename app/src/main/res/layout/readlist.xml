@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/read_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="18dp"
+        android:src="@mipmap/ic_launcher_round" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/readid"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/imgurl"/>
+    <TextView
+        android:id="@+id/readtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="title"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/read_image" />
+
+    <TextView
+        android:id="@+id/readtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="readcount"
+        android:textSize="11sp"
+        android:layout_alignBottom="@+id/read_image"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/readtime"
+        android:layout_alignTop="@+id/readtime"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_remove_red_eye_black_24dp" />
+</RelativeLayout>
