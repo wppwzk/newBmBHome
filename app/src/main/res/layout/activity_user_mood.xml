@@ -19,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sasasasdsasa"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:text="最近一周的心情"
         android:layout_below="@+id/toolbar_user_mood_line"
@@ -33,12 +34,39 @@
         android:layout_margin="10dp"
         android:transitionName="line"/>
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/mood_pie_chart"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:text="" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="心情建议"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textViewmoodjianyi" />
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="心情建议"
+            android:layout_below="@id/textView100"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textViewmoodjianyi" />
+        <TextView
+            android:id="@+id/textViewmoodjianyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心情建议"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </RelativeLayout>
