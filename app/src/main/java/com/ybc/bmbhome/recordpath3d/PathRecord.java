@@ -133,8 +133,6 @@ public class PathRecord implements Parcelable {
         dest.writeString(duration);
         dest.writeString(averagespeed);
         dest.writeString(date);
-
     }
-
 
 }

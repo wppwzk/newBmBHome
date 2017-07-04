@@ -44,7 +44,7 @@ public class WebActivity extends Activity {
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
-                // TODO 自动生成的方法存根
+
 
                 if (newProgress == 100) {
                     pg1.setVisibility(View.GONE);//加载完网页进度条消失
