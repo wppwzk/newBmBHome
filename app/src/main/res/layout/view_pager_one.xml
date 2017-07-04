@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:background="@color/colorGreen"
+        android:background="@color/primary_blue"
         android:fitsSystemWindows="true">
 
         <TextView
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:orientation="horizontal"
-        android:background="@color/colorGreen">
+        android:background="@color/primary_blue">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -36,7 +36,7 @@
                 android:textSize="18sp"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
-                android:text="应用"/>
+                android:text="应用名称"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

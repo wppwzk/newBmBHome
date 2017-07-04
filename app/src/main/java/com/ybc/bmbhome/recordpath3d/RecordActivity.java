@@ -3,8 +3,10 @@ package com.ybc.bmbhome.recordpath3d;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -81,22 +83,12 @@ public class RecordActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//		recordlist.setOnItemLongClickListener(new OnItemLongClickListener() {
-//
-//			@Override
-//			public boolean onItemLongClick(AdapterView<?> parent, View view,
-//					int position, long id) {
-//
-//				Log.i("MY", position+"");
-//				boolean b = DbHepler.delete(listdata.get(position).getId());
-//				if (b) {
-//					listdata.remove(position);
-//					mAdapter.notifyDataSetChanged();
-//					recordlist.invalidate();
-//				}
-//				return false;
-//			}
-//		});
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         SystemBarTintManager localSystemBarTintManager = new SystemBarTintManager(this);
         localSystemBarTintManager.setStatusBarTintResource(R.color.blue);
         localSystemBarTintManager.setStatusBarTintEnabled(true);
@@ -124,4 +116,13 @@ public class RecordActivity extends AppCompatActivity {
         this.finish();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

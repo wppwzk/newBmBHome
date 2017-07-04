@@ -67,7 +67,7 @@ public class MobileActivity extends Activity {
             init();
         }
         SystemBarTintManager localSystemBarTintManager = new SystemBarTintManager(this);
-        localSystemBarTintManager.setStatusBarTintResource(R.color.colorGreen);
+        localSystemBarTintManager.setStatusBarTintResource(R.color.primary_blue_dark);
         localSystemBarTintManager.setStatusBarTintEnabled(true);
     }
 
