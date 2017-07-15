@@ -82,22 +82,13 @@ public class Music extends Service {
 
         switch (s) {
             case "ifm1isplay":
-                // if(!mediaPlayer1.isPlaying()) {
                 mediaPlayer1.start();
-
-                // }
                 break;
             case "ifm2isplay":
-                //if(!mediaPlayer2.isPlaying()){
                 mediaPlayer2.start();
-
-                //}
                 break;
             case "ifm3isplay":
-                //if(!mediaPlayer3.isPlaying()){
                 mediaPlayer3.start();
-
-                //}
                 break;
             case "m1pause":
                 if (mediaPlayer1.isPlaying()) {
