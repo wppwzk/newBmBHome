@@ -17,7 +17,7 @@ import java.util.List;
 
 
 /**
- * Created by YBC on 2017/7/2 20:42.
+ * Created by YBC on 2017/7/2 20:42 20:25 20:25.
  */
 
 public class ReadAdapter extends ArrayAdapter<ReadList> {

@@ -313,7 +313,7 @@ public class ReadActivity extends AppCompatActivity {
     }
 
 
-    private void createProgressBar() {
+   /* private void createProgressBar() {
         mContext = this;
         //整个Activity布局的最终父布局,参见参考资料
         FrameLayout rootFrameLayout = (FrameLayout) findViewById(android.R.id.content);
@@ -324,6 +324,6 @@ public class ReadActivity extends AppCompatActivity {
         progressBar.setLayoutParams(layoutParams);
         progressBar.setVisibility(View.VISIBLE);
         rootFrameLayout.addView(progressBar);
-    }
+    }*/
 
 }
