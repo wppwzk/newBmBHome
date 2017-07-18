@@ -37,7 +37,7 @@ public class DiaryActivity extends BaseActivity {
 
     private ListView mListView;
     private Button mBtnAdd;
-    private String flag; // 标识是更新还是添加
+    private String flag; // 标识是更新还是添加。
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
