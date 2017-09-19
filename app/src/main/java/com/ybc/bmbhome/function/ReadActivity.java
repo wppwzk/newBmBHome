@@ -13,13 +13,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -65,7 +62,7 @@ public class ReadActivity extends AppCompatActivity {
                     listView.setAdapter(readAdapter); // 重新设置ListView的数据适配器
                     break;
                 case 1:
-                    allpagetext.setText(nowpage+" / "+pages);
+                    allpagetext.setText(nowpage + " / " + pages);
                     break;
                 default:
                     break;
@@ -79,7 +76,7 @@ public class ReadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_read);
         shangbut = (Button) findViewById(R.id.shangyiye);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_readlist);
-        allpagetext= (TextView) findViewById(R.id.textView_allpage);
+        allpagetext = (TextView) findViewById(R.id.textView_allpage);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -87,16 +84,16 @@ public class ReadActivity extends AppCompatActivity {
             actionBar.setTitle("读文章");
         }
         xiabut = (Button) findViewById(R.id.xiayiyebutton);
-        if(savedInstanceState!=null){
+        if (savedInstanceState != null) {
             nowpage = savedInstanceState.getInt("Nowpage");
-        }else {
+        } else {
             nowpage = 1;
         }
-        String nowp=Integer.toString(nowpage);
+        String nowp = Integer.toString(nowpage);
 
         sendpages("http://www.bmbhome.org/api/article/num");
-        sendOkhttp("http://www.bmbhome.org/api/article/page/"+nowp);
-        allpagetext.setText(nowp+" / "+pages);
+        sendOkhttp("http://www.bmbhome.org/api/article/page/" + nowp);
+        allpagetext.setText(nowp + " / " + pages);
         readAdapter = new ReadAdapter(ReadActivity.this, R.layout.readlist, readListList);
         listView = (ListView) findViewById(R.id.test);
         listView.setAdapter(readAdapter);
@@ -113,7 +110,7 @@ public class ReadActivity extends AppCompatActivity {
                     sendOkhttp("http://www.bmbhome.org/api/article/page/" + pa);
                     xiabut.setEnabled(true);
                 }
-                allpagetext.setText(nowpage+" / "+pages);
+                allpagetext.setText(nowpage + " / " + pages);
             }
 
         });
@@ -131,7 +128,7 @@ public class ReadActivity extends AppCompatActivity {
                     sendOkhttp("http://www.bmbhome.org/api/article/page/" + pa);
                     shangbut.setEnabled(true);
                 }
-                allpagetext.setText(nowpage+" / "+pages);
+                allpagetext.setText(nowpage + " / " + pages);
             }
 
         });
@@ -139,15 +136,15 @@ public class ReadActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ReadList readList=readListList.get(position);
-                int readid=readList.getId();
-                String imgurl=readList.getImgUrl();
-                String openid=""+readid;
-                String title=readList.getTitle();
-                Intent intent=new Intent(ReadActivity.this,OpenReadActivity.class);
-                intent.putExtra("imgurl",imgurl);
-                intent.putExtra("openid",openid);
-                intent.putExtra("title",title);
+                ReadList readList = readListList.get(position);
+                int readid = readList.getId();
+                String imgurl = readList.getImgUrl();
+                String openid = "" + readid;
+                String title = readList.getTitle();
+                Intent intent = new Intent(ReadActivity.this, OpenReadActivity.class);
+                intent.putExtra("imgurl", imgurl);
+                intent.putExtra("openid", openid);
+                intent.putExtra("title", title);
                 startActivity(intent);
             }
         });
@@ -160,7 +157,7 @@ public class ReadActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
-        outState.putInt("Nowpage",nowpage);
+        outState.putInt("Nowpage", nowpage);
     }
 
     private void clear() {
@@ -180,12 +177,8 @@ public class ReadActivity extends AppCompatActivity {
                     Request request = new Request.Builder().url(url).build();
                     Response response = client.newCall(request).execute();
                     String body = response.body().string();
-                    try {
-                        pages = Integer.parseInt(body);
-                        hander.sendEmptyMessage(1);
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
-                    }
+                    pages = Integer.parseInt(body);
+                    hander.sendEmptyMessage(1);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -227,7 +220,7 @@ public class ReadActivity extends AppCompatActivity {
                     continue;
                 String title = jsonObject.getString("title");
                 String readCount = jsonObject.getString("readCount");
-                ReadList readList = new ReadList(title, readCount, getInternetPicture("http://www.bmbhome.org" + imgUrl),id,imgUrl);
+                ReadList readList = new ReadList(title, readCount, getInternetPicture("http://www.bmbhome.org" + imgUrl), id, imgUrl);
                 readListList.add(readList);
                 hander.sendEmptyMessage(0);
             }
@@ -301,7 +294,7 @@ public class ReadActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    private void showprogress() {
+   /* private void showprogress() {
         if(progressBar.getVisibility()==View.GONE){
             progressBar.setVisibility(View.VISIBLE);
         }
@@ -310,7 +303,7 @@ public class ReadActivity extends AppCompatActivity {
         if(progressBar.getVisibility()==View.VISIBLE){
             progressBar.setVisibility(View.GONE);
         }
-    }
+    }*/
 
 
    /* private void createProgressBar() {

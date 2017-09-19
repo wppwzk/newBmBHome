@@ -33,6 +33,7 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -168,7 +169,6 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <activity android:name=".function.UserMoodActivity" />
         <activity android:name=".function.UserStepActivity" />
         <activity android:name=".function.DiaryActivity" />
@@ -176,8 +176,9 @@
         <activity android:name=".lock.LockActivity" />
         <activity android:name=".lock.LockSetupActivity" />
         <activity android:name=".function.WriteDiaryActivity" />
-        <activity android:name=".function.OpenReadActivity"
-            android:theme="@style/AppTheme.NoActionBar_web"/>
+        <activity
+            android:name=".function.OpenReadActivity"
+            android:theme="@style/AppTheme.NoActionBar_web" />
         <activity android:name=".function.ResetDiaryPasswordActivity">
             <intent-filter>
                 <action android:name="com.ybc.resertDiaryPass" />
@@ -186,8 +187,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".function.RegisterActivity" />
-        <activity android:name=".function.ReadActivity"
-            android:hardwareAccelerated="true"/>
+        <activity
+            android:name=".function.ReadActivity"
+            android:hardwareAccelerated="true" />
+
+        <receiver android:name=".widget.StepWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/step_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".service.TimerService"
+            android:enabled="true"
+            android:exported="true"/>
     </application>
 
 </manifest>

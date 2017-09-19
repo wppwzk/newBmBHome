@@ -7,4 +7,10 @@
 
     <dimen name="pie_chart_single_text_size">42sp</dimen>
     <dimen name="pie_chart_double_text_size">16dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
 </resources>

@@ -47,7 +47,7 @@ import java.util.List;
 
 
 /**
- * AMapV2地图中介绍如何显示一个基本地图
+ * AMapV2地图中显示一个基本地图
  */
 public class MapActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
     private static final int PERMISSON_REQUESTCODE = 0;

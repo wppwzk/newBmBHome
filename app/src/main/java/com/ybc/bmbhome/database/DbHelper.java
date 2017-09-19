@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * 日记数据库操作工具类
+ * 日记数据库类
  */
 public class DbHelper extends SQLiteOpenHelper {
 

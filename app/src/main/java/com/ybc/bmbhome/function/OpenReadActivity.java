@@ -46,9 +46,7 @@ public class OpenReadActivity extends AppCompatActivity {
                     fruitContentText.setText(fruitContent);
                     Glide.with(OpenReadActivity.this).load("http://www.bmbhome.org" + imgurlll).into(fruitImageView);
                     break;
-
                 default:
-
                     break;
             }
         }
